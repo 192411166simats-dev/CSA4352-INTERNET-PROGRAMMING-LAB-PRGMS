@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bus Ticket Booking System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#eef2f7;
+        }
+
+        header{
+            background:#003566;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#00509d;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#003566;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#003566;
+            color:white;
+        }
+
+        footer{
+            background:#003566;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function searchBus(){
+            alert("Available buses found successfully.");
+        }
+
+        function bookTicket(){
+            alert("Ticket booked successfully.");
+        }
+
+        function cancelTicket(){
+            alert("Ticket cancelled successfully.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Online Bus Ticket Booking System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Search Bus</a>
+    <a href="#">Bookings</a>
+    <a href="#">Admin</a>
+    <a href="#">Reports</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search Bus -->
+
+    <div class="card">
+        <h2>Search Bus</h2>
+
+        <input type="text" placeholder="From">
+
+        <input type="text" placeholder="To">
+
+        <input type="date">
+
+        <button onclick="searchBus()">
+            Search Bus
+        </button>
+    </div>
+
+    <!-- Bus Information -->
+
+    <div class="card">
+        <h2>Available Buses</h2>
+
+        <table>
+            <tr>
+                <th>Bus Name</th>
+                <th>Category</th>
+                <th>Departure</th>
+                <th>Available Seats</th>
+                <th>Fare</th>
+            </tr>
+
+            <tr>
+                <td>Express Travels</td>
+                <td>Volvo</td>
+                <td>08:00 PM</td>
+                <td>20</td>
+                <td>₹850</td>
+            </tr>
+
+            <tr>
+                <td>National Travels</td>
+                <td>Sleeper</td>
+                <td>09:30 PM</td>
+                <td>15</td>
+                <td>₹1200</td>
+            </tr>
+
+            <tr>
+                <td>Royal Coach</td>
+                <td>AC Coach</td>
+                <td>10:00 PM</td>
+                <td>12</td>
+                <td>₹950</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Ticket Booking -->
+
+    <div class="card">
+        <h2>Book Ticket</h2>
+
+        <input type="text" placeholder="Passenger Name">
+
+        <input type="number" placeholder="Age">
+
+        <select>
+            <option>Seat 1</option>
+            <option>Seat 2</option>
+            <option>Seat 3</option>
+            <option>Seat 4</option>
+        </select>
+
+        <button onclick="bookTicket()">
+            Book Ticket
+        </button>
+    </div>
+
+    <!-- Payment -->
+
+    <div class="card">
+        <h2>Payment Gateway</h2>
+
+        <input type="text" placeholder="Card Number">
+
+        <input type="text" placeholder="Card Holder Name">
+
+        <input type="text" placeholder="CVV">
+
+        <button>Pay Now</button>
+    </div>
+
+    <!-- Booking History -->
+
+    <div class="card">
+        <h2>Booking History</h2>
+
+        <table>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Bus</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>BT101</td>
+                <td>Express Travels</td>
+                <td>22-06-2026</td>
+                <td>Confirmed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Cancel Ticket -->
+
+    <div class="card">
+        <h2>Cancel Booking</h2>
+
+        <input type="text" placeholder="Ticket ID">
+
+        <button onclick="cancelTicket()">
+            Cancel Ticket
+        </button>
+    </div>
+
+    <!-- Comments -->
+
+    <div class="card">
+        <h2>Comments & Reviews</h2>
+
+        <textarea rows="4"
+        placeholder="Write your feedback"></textarea>
+
+        <button>Submit Comment</button>
+    </div>
+
+    <!-- Admin Login -->
+
+    <div class="card">
+        <h2>Administrator Login</h2>
+
+        <input type="text" placeholder="Admin Username">
+
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Bus Category -->
+
+    <div class="card">
+        <h2>Add Bus Category</h2>
+
+        <input type="text"
+        placeholder="Volvo / Sleeper / Coach">
+
+        <button>Add Category</button>
+    </div>
+
+    <!-- Update Bus -->
+
+    <div class="card">
+        <h2>Update Bus Information</h2>
+
+        <input type="text" placeholder="Bus Name">
+
+        <input type="text" placeholder="Bus Type">
+
+        <input type="text" placeholder="Location">
+
+        <input type="number"
+        placeholder="Available Seats">
+
+        <button>Update Bus</button>
+    </div>
+
+    <!-- Manage Users -->
+
+    <div class="card">
+        <h2>Registered Users</h2>
+
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>john@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- News -->
+
+    <div class="card">
+        <h2>Manage News</h2>
+
+        <textarea rows="4"
+        placeholder="Enter latest announcements"></textarea>
+
+        <button>Publish News</button>
+    </div>
+
+    <!-- Reports -->
+
+    <div class="card">
+        <h2>Report Generation</h2>
+
+        <table>
+            <tr>
+                <th>Total Buses</th>
+                <th>Total Bookings</th>
+                <th>Total Users</th>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>120</td>
+                <td>75</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Online Bus Ticket Booking System
+</footer>
+
+</body>
+</html>
