@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReNewMarket - Second Hand Marketplace</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f7f2;
+        }
+
+        header{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#40916c;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#2d6a4f;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#2d6a4f;
+            color:white;
+        }
+
+        footer{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function addItem(){
+            alert("Item listed successfully.");
+        }
+
+        function orderStatus(){
+            alert("Order Status: Shipped");
+        }
+
+        function contactSeller(){
+            alert("Seller contacted successfully.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>ReNewMarket</h1>
+    <p>Second-Hand Marketplace System</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">Listings</a>
+    <a href="#">Orders</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search -->
+
+    <div class="card">
+        <h2>Search Products</h2>
+
+        <input type="text"
+        placeholder="Search second-hand items">
+
+        <button>Search</button>
+    </div>
+
+    <!-- Categories -->
+
+    <div class="card">
+        <h2>Categories</h2>
+
+        <ul>
+            <li>Electronics</li>
+            <li>Furniture</li>
+            <li>Clothing</li>
+            <li>Collectibles</li>
+        </ul>
+    </div>
+
+    <!-- Products -->
+
+    <div class="card">
+        <h2>Available Products</h2>
+
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Condition</th>
+            </tr>
+
+            <tr>
+                <td>Used Laptop</td>
+                <td>Electronics</td>
+                <td>₹25,000</td>
+                <td>Good</td>
+            </tr>
+
+            <tr>
+                <td>Study Table</td>
+                <td>Furniture</td>
+                <td>₹4,500</td>
+                <td>Excellent</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Product Details -->
+
+    <div class="card">
+        <h2>Product Details</h2>
+
+        <p><b>Product:</b> Used Laptop</p>
+        <p><b>Brand:</b> ASUS</p>
+        <p><b>Age:</b> 2 Years</p>
+        <p><b>Condition:</b> Good</p>
+    </div>
+
+    <!-- Seller Listing -->
+
+    <div class="card">
+        <h2>Create Listing</h2>
+
+        <input type="text" placeholder="Product Name">
+
+        <input type="number" placeholder="Price">
+
+        <textarea placeholder="Description"></textarea>
+
+        <button onclick="addItem()">
+            Add Listing
+        </button>
+    </div>
+
+    <!-- Contact -->
+
+    <div class="card">
+        <h2>Contact Seller</h2>
+
+        <button onclick="contactSeller()">
+            Send Message
+        </button>
+    </div>
+
+    <!-- Favorites -->
+
+    <div class="card">
+        <h2>Favorite Items</h2>
+
+        <ul>
+            <li>Used Laptop</li>
+            <li>Study Table</li>
+        </ul>
+    </div>
+
+    <!-- Orders -->
+
+    <div class="card">
+        <h2>Order Tracking</h2>
+
+        <input type="text"
+        placeholder="Order ID">
+
+        <button onclick="orderStatus()">
+            Check Status
+        </button>
+    </div>
+
+    <!-- Transaction History -->
+
+    <div class="card">
+        <h2>Transaction History</h2>
+
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Item</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>RM101</td>
+                <td>Used Laptop</td>
+                <td>Delivered</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Reviews -->
+
+    <div class="card">
+        <h2>Reviews & Ratings</h2>
+
+        <textarea rows="4"
+        placeholder="Write your feedback"></textarea>
+
+        <button>Submit Review</button>
+    </div>
+
+    <!-- User Management -->
+
+    <div class="card">
+        <h2>User Management</h2>
+
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Vikram</td>
+                <td>Active</td>
+            </tr>
+        </table>
+
+        <button>Edit User</button>
+        <button>Delete User</button>
+    </div>
+
+    <!-- Category Management -->
+
+    <div class="card">
+        <h2>Category Management</h2>
+
+        <input type="text"
+        placeholder="Category Name">
+
+        <button>Add Category</button>
+        <button>Delete Category</button>
+    </div>
+
+    <!-- Commodity Management -->
+
+    <div class="card">
+        <h2>Commodity Management</h2>
+
+        <button>Edit Product</button>
+        <button>Delete Product</button>
+    </div>
+
+    <!-- Order Management -->
+
+    <div class="card">
+        <h2>Order Management</h2>
+
+        <select>
+            <option>Shipped</option>
+            <option>Received</option>
+        </select>
+
+        <button>Update Status</button>
+        <button>Delete Order</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 ReNewMarket Marketplace
+</footer>
+
+</body>
+</html>
