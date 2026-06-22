@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ComplainEase Complaint Management System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f2f5f9;
+        }
+
+        header{
+            background:#1d3557;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#457b9d;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#1d3557;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#1d3557;
+            color:white;
+        }
+
+        footer{
+            background:#1d3557;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function submitComplaint(){
+            alert("Complaint submitted successfully.");
+        }
+
+        function checkStatus(){
+            alert("Complaint Status: In Progress");
+        }
+
+        function updateStatus(){
+            alert("Status updated successfully.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>ComplainEase</h1>
+    <p>Online Complaint Management System</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Complaints</a>
+    <a href="#">Status</a>
+    <a href="#">Officer</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- User Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- User Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Complaint Form -->
+
+    <div class="card">
+        <h2>Post Complaint</h2>
+
+        <select>
+            <option>Road Damage</option>
+            <option>Water Problem</option>
+            <option>Electricity Issue</option>
+            <option>Garbage Complaint</option>
+        </select>
+
+        <textarea
+        placeholder="Describe your complaint">
+        </textarea>
+
+        <input type="file">
+
+        <button onclick="submitComplaint()">
+            Submit Complaint
+        </button>
+    </div>
+
+    <!-- Location -->
+
+    <div class="card">
+        <h2>Complaint Location</h2>
+
+        <iframe
+        width="100%"
+        height="300"
+        src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+    <!-- Status -->
+
+    <div class="card">
+        <h2>Complaint Status</h2>
+
+        <input type="text"
+        placeholder="Complaint ID">
+
+        <button onclick="checkStatus()">
+            View Status
+        </button>
+    </div>
+
+    <!-- History -->
+
+    <div class="card">
+        <h2>Complaint History</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>C101</td>
+                <td>Road Damage</td>
+                <td>Resolved</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Feedback -->
+
+    <div class="card">
+        <h2>Feedback</h2>
+
+        <textarea
+        placeholder="Enter your feedback">
+        </textarea>
+
+        <button>Submit Feedback</button>
+    </div>
+
+    <!-- Admin Contact -->
+
+    <div class="card">
+        <h2>Admin Contact</h2>
+
+        <p>Email: admin@complainease.com</p>
+        <p>Phone: +91 9876543210</p>
+    </div>
+
+    <!-- Officer Registration -->
+
+    <div class="card">
+        <h2>Officer Registration</h2>
+
+        <input type="text"
+        placeholder="Officer Name">
+
+        <input type="text"
+        placeholder="Department">
+
+        <button>Register Officer</button>
+    </div>
+
+    <!-- Officer Login -->
+
+    <div class="card">
+        <h2>Officer Login</h2>
+
+        <input type="text"
+        placeholder="Officer ID">
+
+        <input type="password"
+        placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- View Complaints -->
+
+    <div class="card">
+        <h2>View Complaints</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Complaint</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>C101</td>
+                <td>Road Damage</td>
+                <td>Pending</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Update Status -->
+
+    <div class="card">
+        <h2>Update Complaint Status</h2>
+
+        <select>
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Resolved</option>
+        </select>
+
+        <input type="file">
+
+        <button onclick="updateStatus()">
+            Update Status
+        </button>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Panel</h2>
+
+        <input type="text"
+        placeholder="Officer ID">
+
+        <input type="password"
+        placeholder="Password">
+
+        <button>Generate Login</button>
+    </div>
+
+    <!-- Accounts -->
+
+    <div class="card">
+        <h2>Manage Accounts</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+
+            <tr>
+                <td>Raj</td>
+                <td>Officer</td>
+            </tr>
+
+            <tr>
+                <td>Vikram</td>
+                <td>User</td>
+            </tr>
+        </table>
+
+        <button>Create Account</button>
+        <button>Delete Account</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 ComplainEase Complaint Management System
+</footer>
+
+</body>
+</html>
