@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Finder - Real Estate System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+        }
+
+        header{
+            background:#0b3d91;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#1456b8;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#0b3d91;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#0b3d91;
+            color:white;
+        }
+
+        footer{
+            background:#0b3d91;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function searchProperty(){
+            alert("Properties Found Successfully!");
+        }
+
+        function bookVisit(){
+            alert("Property Visit Scheduled.");
+        }
+
+        function calculateEMI(){
+            var loan = document.getElementById("loan").value;
+            if(loan!=""){
+                alert("Estimated EMI calculation completed.");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Home Finder Real Estate Portal</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Properties</a>
+    <a href="#">Agents</a>
+    <a href="#">Maps</a>
+    <a href="#">Favorites</a>
+    <a href="#">Admin</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>Buyer Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search -->
+
+    <div class="card">
+        <h2>Search Property</h2>
+
+        <input type="text" placeholder="Location">
+
+        <select>
+            <option>Apartment</option>
+            <option>House</option>
+            <option>Land</option>
+            <option>Commercial</option>
+        </select>
+
+        <input type="number" placeholder="Budget">
+
+        <button onclick="searchProperty()">
+            Search
+        </button>
+    </div>
+
+    <!-- Listings -->
+
+    <div class="card">
+        <h2>Property Listings</h2>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>3BHK Villa</td>
+                <td>Chennai</td>
+                <td>₹85 Lakhs</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Residential Plot</td>
+                <td>Tambaram</td>
+                <td>₹35 Lakhs</td>
+                <td>Available</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Details -->
+
+    <div class="card">
+        <h2>Property Details</h2>
+
+        <p><b>Area:</b> 1800 sq.ft</p>
+        <p><b>Bedrooms:</b> 3</p>
+        <p><b>Bathrooms:</b> 2</p>
+        <p><b>Parking:</b> Available</p>
+    </div>
+
+    <!-- Agent Search -->
+
+    <div class="card">
+        <h2>Search Agent / Company</h2>
+
+        <input type="text" placeholder="Agent Name">
+
+        <button>Search Agent</button>
+    </div>
+
+    <!-- Favorites -->
+
+    <div class="card">
+        <h2>Favorite Properties</h2>
+
+        <ul>
+            <li>3BHK Villa - Chennai</li>
+            <li>Residential Plot - Tambaram</li>
+        </ul>
+    </div>
+
+    <!-- Schedule -->
+
+    <div class="card">
+        <h2>Schedule Property Visit</h2>
+
+        <input type="date">
+        <input type="time">
+
+        <button onclick="bookVisit()">
+            Book Visit
+        </button>
+    </div>
+
+    <!-- Mortgage -->
+
+    <div class="card">
+        <h2>Mortgage Calculator</h2>
+
+        <input type="number"
+        id="loan"
+        placeholder="Loan Amount">
+
+        <button onclick="calculateEMI()">
+            Calculate EMI
+        </button>
+    </div>
+
+    <!-- Maps -->
+
+    <div class="card">
+        <h2>Property Location</h2>
+
+        <iframe
+        width="100%"
+        height="300"
+        src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+    <!-- Contact Agent -->
+
+    <div class="card">
+        <h2>Contact Agent</h2>
+
+        <input type="text" placeholder="Your Name">
+        <textarea placeholder="Message"></textarea>
+
+        <button>Send Message</button>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Panel</h2>
+
+        <input type="text" placeholder="Property Name">
+        <input type="number" placeholder="Price">
+
+        <textarea placeholder="Description"></textarea>
+
+        <button>Add Property</button>
+        <button>Update Property</button>
+        <button>Delete Property</button>
+    </div>
+
+    <!-- Customer Records -->
+
+    <div class="card">
+        <h2>Customer Records</h2>
+
+        <table>
+            <tr>
+                <th>Customer</th>
+                <th>Visited Property</th>
+            </tr>
+
+            <tr>
+                <td>Vikram</td>
+                <td>3BHK Villa</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Advertisements -->
+
+    <div class="card">
+        <h2>Advertisements</h2>
+
+        <p>🏠 New Apartments Available</p>
+        <p>🏢 Commercial Spaces for Rent</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Home Finder Real Estate Portal
+</footer>
+
+</body>
+</html>
