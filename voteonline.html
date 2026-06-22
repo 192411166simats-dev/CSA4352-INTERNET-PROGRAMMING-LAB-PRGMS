@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VoteOnline E-Voting System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f2f5f9;
+        }
+
+        header{
+            background:#1b4332;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#2d6a4f;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#1b4332;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#1b4332;
+            color:white;
+        }
+
+        footer{
+            background:#1b4332;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function getOTP(){
+            alert("OTP Sent Successfully.");
+        }
+
+        function verifyOTP(){
+            alert("OTP Verified.");
+        }
+
+        function submitVote(){
+            alert("Vote Submitted Successfully.");
+        }
+
+        function result(){
+            alert("Election Results Published.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>VoteOnline E-Voting System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Election</a>
+    <a href="#">Vote</a>
+    <a href="#">Results</a>
+    <a href="#">Admin</a>
+</nav>
+
+<div class="container">
+
+    <!-- Voter Login -->
+
+    <div class="card">
+        <h2>Voter Login</h2>
+
+        <input type="text"
+        placeholder="Enter Voter ID">
+
+        <button onclick="getOTP()">
+            Get OTP
+        </button>
+    </div>
+
+    <!-- OTP -->
+
+    <div class="card">
+        <h2>OTP Verification</h2>
+
+        <input type="text"
+        placeholder="Enter OTP">
+
+        <button onclick="verifyOTP()">
+            Verify OTP
+        </button>
+    </div>
+
+    <!-- Candidate List -->
+
+    <div class="card">
+        <h2>Candidates</h2>
+
+        <table>
+            <tr>
+                <th>Candidate</th>
+                <th>Party</th>
+                <th>Symbol</th>
+            </tr>
+
+            <tr>
+                <td>Rahul Kumar</td>
+                <td>Party A</td>
+                <td>🌟</td>
+            </tr>
+
+            <tr>
+                <td>Priya Devi</td>
+                <td>Party B</td>
+                <td>🌹</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Voting -->
+
+    <div class="card">
+        <h2>Cast Your Vote</h2>
+
+        <select>
+            <option>Select Candidate</option>
+            <option>Rahul Kumar</option>
+            <option>Priya Devi</option>
+        </select>
+
+        <button onclick="submitVote()">
+            Submit Vote
+        </button>
+    </div>
+
+    <!-- History -->
+
+    <div class="card">
+        <h2>Voting History</h2>
+
+        <table>
+            <tr>
+                <th>Election</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Student Election 2026</td>
+                <td>Voted</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Panel</h2>
+
+        <input type="text"
+        placeholder="Election Name">
+
+        <button>Create Election</button>
+    </div>
+
+    <!-- Candidate -->
+
+    <div class="card">
+        <h2>Add Candidate</h2>
+
+        <input type="text"
+        placeholder="Candidate Name">
+
+        <input type="text"
+        placeholder="Party Name">
+
+        <button>Add Candidate</button>
+    </div>
+
+    <!-- Voters -->
+
+    <div class="card">
+        <h2>Voter List</h2>
+
+        <table>
+            <tr>
+                <th>Voter ID</th>
+                <th>Name</th>
+                <th>Ward</th>
+            </tr>
+
+            <tr>
+                <td>V101</td>
+                <td>Vikram</td>
+                <td>Ward 5</td>
+            </tr>
+        </table>
+
+        <button>Import Voter List</button>
+        <button>Update Voter List</button>
+    </div>
+
+    <!-- Results -->
+
+    <div class="card">
+        <h2>Election Results</h2>
+
+        <button onclick="result()">
+            View Results
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 VoteOnline E-Voting System
+</footer>
+
+</body>
+</html>
