@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f2f5f9;
+        }
+
+        header{
+            background:#1e3c72;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#2a5298;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav button{
+            padding:10px 20px;
+            margin:5px;
+            border:none;
+            background:white;
+            color:#2a5298;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button.submit{
+            background:#1e3c72;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table,th,td{
+            border:1px solid #ddd;
+        }
+
+        th,td{
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#1e3c72;
+            color:white;
+        }
+
+        footer{
+            background:#1e3c72;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function searchBook() {
+            var input = document.getElementById("search").value.toLowerCase();
+            var rows = document.getElementsByClassName("book");
+
+            for(let i=0;i<rows.length;i++){
+                if(rows[i].innerText.toLowerCase().includes(input))
+                    rows[i].style.display="";
+                else
+                    rows[i].style.display="none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Library Management System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <button>Home</button>
+    <button>Admin</button>
+    <button>User</button>
+    <button>Books</button>
+    <button>Materials</button>
+    <button>Contact</button>
+</nav>
+
+<div class="container">
+
+    <!-- Admin Login -->
+    <div class="card">
+        <h2>Librarian Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button class="submit">Login</button>
+    </div>
+
+    <!-- User Registration -->
+    <div class="card">
+        <h2>User Registration</h2>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="submit">Register</button>
+    </div>
+
+    <!-- Search -->
+    <div class="card">
+        <h2>Search Book</h2>
+        <input type="text" id="search" placeholder="Enter Book Name" onkeyup="searchBook()">
+    </div>
+
+    <!-- Books -->
+    <div class="card">
+        <h2>Available Books</h2>
+
+        <table>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Status</th>
+            </tr>
+
+            <tr class="book">
+                <td>101</td>
+                <td>Java Programming</td>
+                <td>Herbert Schildt</td>
+                <td>Available</td>
+            </tr>
+
+            <tr class="book">
+                <td>102</td>
+                <td>Python Basics</td>
+                <td>Mark Lutz</td>
+                <td>Issued</td>
+            </tr>
+
+            <tr class="book">
+                <td>103</td>
+                <td>Data Structures</td>
+                <td>Seymour Lipschutz</td>
+                <td>Available</td>
+            </tr>
+
+            <tr class="book">
+                <td>104</td>
+                <td>Web Technology</td>
+                <td>Deitel</td>
+                <td>Available</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Add Book -->
+    <div class="card">
+        <h2>Add New Book</h2>
+        <input type="text" placeholder="Book Name">
+        <input type="text" placeholder="Author">
+        <input type="number" placeholder="Book ID">
+        <button class="submit">Add Book</button>
+    </div>
+
+    <!-- Borrow History -->
+    <div class="card">
+        <h2>My Borrow History</h2>
+
+        <table>
+            <tr>
+                <th>Book</th>
+                <th>Issue Date</th>
+                <th>Expiry Date</th>
+            </tr>
+
+            <tr>
+                <td>Python Basics</td>
+                <td>10-06-2026</td>
+                <td>20-06-2026</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Fine -->
+    <div class="card">
+        <h2>Fine Details</h2>
+        <p>Current Fine Amount: <b>₹50</b></p>
+    </div>
+
+    <!-- Materials -->
+    <div class="card">
+        <h2>Study Materials</h2>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Semester</th>
+                <th>Material</th>
+                <th>Download</th>
+            </tr>
+
+            <tr>
+                <td>2nd Year</td>
+                <td>4th Semester</td>
+                <td>Internet Programming Notes</td>
+                <td><button class="submit">Download</button></td>
+            </tr>
+
+            <tr>
+                <td>3rd Year</td>
+                <td>5th Semester</td>
+                <td>Database Management</td>
+                <td><button class="submit">Download</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Profile -->
+    <div class="card">
+        <h2>My Profile</h2>
+        <p><b>Name:</b> Student Name</p>
+        <p><b>Department:</b> CSE</p>
+        <p><b>Email:</b> student@gmail.com</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <h2>Contact Library</h2>
+
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Message"></textarea>
+
+        <button class="submit">Send Message</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Library Management System | Internet Programming Lab
+</footer>
+
+</body>
+</html>
