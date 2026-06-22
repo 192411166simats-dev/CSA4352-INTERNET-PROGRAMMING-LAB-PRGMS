@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Train Reservation System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        header{
+            background:#003049;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#005f73;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#003049;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#003049;
+            color:white;
+        }
+
+        footer{
+            background:#003049;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function searchTrain(){
+            alert("Available trains found.");
+        }
+
+        function bookTicket(){
+            alert("Ticket booked successfully.\nPNR: 1234567890");
+        }
+
+        function checkPNR(){
+            alert("PNR Status: Confirmed");
+        }
+
+        function cancelTicket(){
+            alert("Ticket cancelled successfully.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Online Train Reservation System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Search Train</a>
+    <a href="#">Book Ticket</a>
+    <a href="#">PNR Status</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>Passenger Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>Passenger Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search Train -->
+
+    <div class="card">
+        <h2>Search Trains</h2>
+
+        <input type="text" placeholder="Origin Station">
+
+        <input type="text" placeholder="Destination Station">
+
+        <input type="date">
+
+        <button onclick="searchTrain()">
+            Search Train
+        </button>
+    </div>
+
+    <!-- Train List -->
+
+    <div class="card">
+        <h2>Available Trains</h2>
+
+        <table>
+            <tr>
+                <th>Train No</th>
+                <th>Train Name</th>
+                <th>Class</th>
+                <th>Seats</th>
+                <th>Fare</th>
+            </tr>
+
+            <tr>
+                <td>12622</td>
+                <td>Tamil Nadu Express</td>
+                <td>AC 3 Tier</td>
+                <td>45</td>
+                <td>₹850</td>
+            </tr>
+
+            <tr>
+                <td>12624</td>
+                <td>Chennai Mail</td>
+                <td>Sleeper</td>
+                <td>60</td>
+                <td>₹450</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Booking -->
+
+    <div class="card">
+        <h2>Book Ticket</h2>
+
+        <input type="text" placeholder="Passenger Name">
+
+        <input type="number" placeholder="Age">
+
+        <select>
+            <option>AC First Class</option>
+            <option>AC 2 Tier</option>
+            <option>AC 3 Tier</option>
+            <option>Sleeper</option>
+        </select>
+
+        <button onclick="bookTicket()">
+            Confirm Booking
+        </button>
+    </div>
+
+    <!-- Payment -->
+
+    <div class="card">
+        <h2>Payment Gateway</h2>
+
+        <input type="text" placeholder="Card Number">
+
+        <input type="text" placeholder="Card Holder Name">
+
+        <input type="text" placeholder="CVV">
+
+        <button>Pay Now</button>
+    </div>
+
+    <!-- PNR -->
+
+    <div class="card">
+        <h2>Check PNR Status</h2>
+
+        <input type="text" placeholder="Enter PNR Number">
+
+        <button onclick="checkPNR()">
+            Check Status
+        </button>
+    </div>
+
+    <!-- History -->
+
+    <div class="card">
+        <h2>Booking History</h2>
+
+        <table>
+            <tr>
+                <th>PNR</th>
+                <th>Train</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>1234567890</td>
+                <td>Tamil Nadu Express</td>
+                <td>25-06-2026</td>
+                <td>Confirmed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Print Ticket -->
+
+    <div class="card">
+        <h2>Print Ticket</h2>
+
+        <button onclick="window.print()">
+            Print Ticket
+        </button>
+    </div>
+
+    <!-- Cancel Ticket -->
+
+    <div class="card">
+        <h2>Cancel Ticket</h2>
+
+        <input type="text" placeholder="Enter PNR Number">
+
+        <button onclick="cancelTicket()">
+            Cancel Ticket
+        </button>
+    </div>
+
+    <!-- Refund -->
+
+    <div class="card">
+        <h2>Refund Status</h2>
+
+        <p>Refund Amount: ₹650</p>
+        <p>Refund Percentage: 80%</p>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Administrator Login</h2>
+
+        <input type="text" placeholder="Admin Username">
+
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Train Management -->
+
+    <div class="card">
+        <h2>Manage Train Details</h2>
+
+        <input type="text" placeholder="Train Number">
+
+        <input type="text" placeholder="Train Name">
+
+        <input type="number" placeholder="Available Seats">
+
+        <input type="number" placeholder="Fare">
+
+        <button>Update Train</button>
+    </div>
+
+    <!-- Payment Details -->
+
+    <div class="card">
+        <h2>Payment Records</h2>
+
+        <table>
+            <tr>
+                <th>PNR</th>
+                <th>Passenger</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr>
+                <td>1234567890</td>
+                <td>Rahul</td>
+                <td>₹850</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Online Train Reservation System
+</footer>
+
+</body>
+</html>
