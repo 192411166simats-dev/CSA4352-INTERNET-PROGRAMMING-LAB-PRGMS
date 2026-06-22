@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Cake Ordering System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#fff5f7;
+        }
+
+        header{
+            background:#d63384;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#ff69b4;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#d63384;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#d63384;
+            color:white;
+        }
+
+        footer{
+            background:#d63384;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function placeOrder(){
+            alert("Cake ordered successfully!");
+        }
+
+        function trackOrder(){
+            alert("Order Status: Out for Delivery");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Online Cake Ordering System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Cakes</a>
+    <a href="#">Orders</a>
+    <a href="#">Track Order</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Cake Categories -->
+
+    <div class="card">
+        <h2>Cake Categories</h2>
+
+        <table>
+            <tr>
+                <th>Cake</th>
+                <th>Flavor</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Birthday Cake</td>
+                <td>Chocolate</td>
+                <td>₹700</td>
+            </tr>
+
+            <tr>
+                <td>Wedding Cake</td>
+                <td>Vanilla</td>
+                <td>₹1500</td>
+            </tr>
+
+            <tr>
+                <td>Anniversary Cake</td>
+                <td>Red Velvet</td>
+                <td>₹900</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Order Cake -->
+
+    <div class="card">
+        <h2>Order Cake</h2>
+
+        <select>
+            <option>Chocolate Cake</option>
+            <option>Vanilla Cake</option>
+            <option>Red Velvet Cake</option>
+        </select>
+
+        <select>
+            <option>0.5 Kg</option>
+            <option>1 Kg</option>
+            <option>2 Kg</option>
+        </select>
+
+        <input type="text" placeholder="Message on Cake">
+
+        <textarea placeholder="Delivery Address"></textarea>
+
+        <button onclick="placeOrder()">
+            Place Order
+        </button>
+    </div>
+
+    <!-- Payment -->
+
+    <div class="card">
+        <h2>Payment Gateway</h2>
+
+        <input type="text" placeholder="Card Number">
+
+        <input type="text" placeholder="Card Holder Name">
+
+        <input type="text" placeholder="CVV">
+
+        <button>Pay Now</button>
+    </div>
+
+    <!-- Order History -->
+
+    <div class="card">
+        <h2>My Orders</h2>
+
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Cake</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>CK101</td>
+                <td>Chocolate Cake</td>
+                <td>22-06-2026</td>
+                <td>Delivered</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Track -->
+
+    <div class="card">
+        <h2>Track Order</h2>
+
+        <input type="text" placeholder="Enter Order ID">
+
+        <button onclick="trackOrder()">
+            Track Order
+        </button>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Login</h2>
+
+        <input type="text" placeholder="Admin Username">
+
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Inventory -->
+
+    <div class="card">
+        <h2>Manage Cake Inventory</h2>
+
+        <input type="text" placeholder="Cake Name">
+
+        <input type="number" placeholder="Quantity">
+
+        <input type="number" placeholder="Price">
+
+        <button>Update Inventory</button>
+    </div>
+
+    <!-- User Management -->
+
+    <div class="card">
+        <h2>Registered Users</h2>
+
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Rahul</td>
+                <td>rahul@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Contact -->
+
+    <div class="card">
+        <h2>Contact Us</h2>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Email">
+
+        <textarea rows="4"
+        placeholder="Message"></textarea>
+
+        <button>Send Message</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Online Cake Ordering System
+</footer>
+
+</body>
+</html>
