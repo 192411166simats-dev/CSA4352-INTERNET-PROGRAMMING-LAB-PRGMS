@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriMart Agricultural Marketplace</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f5fff0;
+        }
+
+        header{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#40916c;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            margin-top:20px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#2d6a4f;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#2d6a4f;
+            color:white;
+        }
+
+        footer{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function sendOTP(){
+            alert("OTP Sent Successfully.");
+        }
+
+        function addProduct(){
+            alert("Product Added Successfully.");
+        }
+
+        function orderPlaced(){
+            alert("Order Placed Successfully.");
+        }
+
+        function wallet(){
+            alert("Wallet Balance Updated.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>AgriMart</h1>
+    <p>Agricultural Marketplace System</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Farmers</a>
+    <a href="#">Orders</a>
+    <a href="#">Wallet</a>
+</nav>
+
+<div class="container">
+
+    <!-- Farmer Registration -->
+
+    <div class="card">
+        <h2>Farmer Registration</h2>
+
+        <input type="text" placeholder="Farmer Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Farmer Login -->
+
+    <div class="card">
+        <h2>Farmer Login</h2>
+
+        <input type="text" placeholder="Farmer ID">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- OTP -->
+
+    <div class="card">
+        <h2>OTP Verification</h2>
+
+        <input type="text" placeholder="Mobile Number">
+
+        <button onclick="sendOTP()">
+            Get OTP
+        </button>
+    </div>
+
+    <!-- Add Product -->
+
+    <div class="card">
+        <h2>Add Product</h2>
+
+        <input type="text" placeholder="Product Name">
+
+        <input type="number" placeholder="Price">
+
+        <textarea placeholder="Description"></textarea>
+
+        <input type="file">
+
+        <button onclick="addProduct()">
+            Add Product
+        </button>
+    </div>
+
+    <!-- Products -->
+
+    <div class="card">
+        <h2>Available Products</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Wheat Seeds</td>
+                <td>Seeds</td>
+                <td>₹350</td>
+            </tr>
+
+            <tr>
+                <td>Organic Fertilizer</td>
+                <td>Fertilizer</td>
+                <td>₹600</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Public Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+
+        <button>Register</button>
+    </div>
+
+    <!-- User Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Wallet -->
+
+    <div class="card">
+        <h2>Wallet Balance</h2>
+
+        <input type="number" placeholder="Add Amount">
+
+        <button onclick="wallet()">
+            Add Money
+        </button>
+    </div>
+
+    <!-- Search -->
+
+    <div class="card">
+        <h2>Search Products</h2>
+
+        <input type="text"
+        placeholder="Search agricultural products">
+
+        <button>Search</button>
+    </div>
+
+    <!-- Cart -->
+
+    <div class="card">
+        <h2>Shopping Cart</h2>
+
+        <button>Add to Cart</button>
+        <button>Edit Cart</button>
+        <button>Delete Cart</button>
+    </div>
+
+    <!-- Address -->
+
+    <div class="card">
+        <h2>Shipping Address</h2>
+
+        <textarea placeholder="Enter Address"></textarea>
+
+        <button>Save Address</button>
+    </div>
+
+    <!-- Order -->
+
+    <div class="card">
+        <h2>Place Order</h2>
+
+        <button onclick="orderPlaced()">
+            Order Product
+        </button>
+    </div>
+
+    <!-- Status -->
+
+    <div class="card">
+        <h2>Order Status</h2>
+
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>AG101</td>
+                <td>Shipped</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Sales -->
+
+    <div class="card">
+        <h2>Farmer Sales</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Sales</th>
+            </tr>
+
+            <tr>
+                <td>Wheat Seeds</td>
+                <td>₹12,500</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Shipping -->
+
+    <div class="card">
+        <h2>Shipping Status</h2>
+
+        <select>
+            <option>Processing</option>
+            <option>Shipped</option>
+            <option>Delivered</option>
+        </select>
+
+        <button>Update Status</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 AgriMart Agricultural Marketplace
+</footer>
+
+</body>
+</html>
