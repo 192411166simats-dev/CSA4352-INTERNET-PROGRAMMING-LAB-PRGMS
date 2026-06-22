@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechSavvy Electronics Store</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        header{
+            background:#0d1b2a;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#1b263b;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#0d1b2a;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#0d1b2a;
+            color:white;
+        }
+
+        footer{
+            background:#0d1b2a;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function addCart(){
+            alert("Item added to cart.");
+        }
+
+        function checkout(){
+            alert("Order placed successfully.");
+        }
+
+        function checkStatus(){
+            alert("Order Status: Shipped");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>TechSavvy Electronics Store</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Cart</a>
+    <a href="#">Orders</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search -->
+
+    <div class="card">
+        <h2>Search Products</h2>
+
+        <input type="text" placeholder="Search gadgets">
+
+        <button>Search</button>
+    </div>
+
+    <!-- Categories -->
+
+    <div class="card">
+        <h2>Categories</h2>
+
+        <ul>
+            <li>Smartphones</li>
+            <li>Laptops</li>
+            <li>Tablets</li>
+            <li>Accessories</li>
+        </ul>
+    </div>
+
+    <!-- Products -->
+
+    <div class="card">
+        <h2>Available Products</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+
+            <tr>
+                <td>iPhone 16</td>
+                <td>Smartphone</td>
+                <td>₹79,999</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Gaming Laptop</td>
+                <td>Laptop</td>
+                <td>₹89,999</td>
+                <td>Available</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Details -->
+
+    <div class="card">
+        <h2>Product Details</h2>
+
+        <p><b>Product:</b> Gaming Laptop</p>
+        <p><b>Processor:</b> Ryzen 7</p>
+        <p><b>RAM:</b> 16GB</p>
+        <p><b>Storage:</b> 512GB SSD</p>
+    </div>
+
+    <!-- Cart -->
+
+    <div class="card">
+        <h2>Shopping Cart</h2>
+
+        <button onclick="addCart()">
+            Add Item
+        </button>
+
+        <button>
+            Edit Cart
+        </button>
+
+        <button>
+            Remove Item
+        </button>
+    </div>
+
+    <!-- Wishlist -->
+
+    <div class="card">
+        <h2>Wishlist</h2>
+
+        <p>Saved Products:</p>
+        <ul>
+            <li>iPhone 16</li>
+            <li>Gaming Laptop</li>
+        </ul>
+    </div>
+
+    <!-- Checkout -->
+
+    <div class="card">
+        <h2>Checkout</h2>
+
+        <input type="text" placeholder="Shipping Address">
+
+        <select>
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+            <option>UPI</option>
+        </select>
+
+        <button onclick="checkout()">
+            Place Order
+        </button>
+    </div>
+
+    <!-- Order Status -->
+
+    <div class="card">
+        <h2>Order Status</h2>
+
+        <input type="text" placeholder="Order ID">
+
+        <button onclick="checkStatus()">
+            Check Status
+        </button>
+    </div>
+
+    <!-- Order History -->
+
+    <div class="card">
+        <h2>Order History</h2>
+
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>TS101</td>
+                <td>Gaming Laptop</td>
+                <td>Delivered</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Panel</h2>
+
+        <input type="text" placeholder="Product Name">
+
+        <input type="number" placeholder="Price">
+
+        <textarea placeholder="Description"></textarea>
+
+        <button>Add Product</button>
+        <button>Update Product</button>
+        <button>Delete Product</button>
+    </div>
+
+    <!-- Customer Info -->
+
+    <div class="card">
+        <h2>Customer Orders</h2>
+
+        <table>
+            <tr>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr>
+                <td>Rahul</td>
+                <td>Gaming Laptop</td>
+                <td>₹89,999</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Logout -->
+
+    <div class="card">
+        <h2>Account</h2>
+
+        <button>Logout</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 TechSavvy Electronics Store
+</footer>
+
+</body>
+</html>
