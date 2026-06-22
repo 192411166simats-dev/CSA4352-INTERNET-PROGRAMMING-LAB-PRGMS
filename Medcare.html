@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedCare Hospital Appointment System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f8fb;
+        }
+
+        header{
+            background:#0077b6;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#0096c7;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            margin-top:20px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#0077b6;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#0077b6;
+            color:white;
+        }
+
+        footer{
+            background:#0077b6;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function bookAppointment(){
+            alert("Appointment Booked Successfully!");
+        }
+
+        function cancelAppointment(){
+            alert("Appointment Cancelled.");
+        }
+
+        function checkStatus(){
+            alert("Appointment Status: Confirmed");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>MedCare Hospital Appointment System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Hospitals</a>
+    <a href="#">Doctors</a>
+    <a href="#">Appointments</a>
+    <a href="#">Admin</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- User Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- User Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Search Hospital -->
+
+    <div class="card">
+        <h2>Search Hospital by Location</h2>
+
+        <input type="text" placeholder="Enter Location">
+
+        <button>Search</button>
+    </div>
+
+    <!-- Hospital List -->
+
+    <div class="card">
+        <h2>Hospital List</h2>
+
+        <table>
+            <tr>
+                <th>Hospital</th>
+                <th>Location</th>
+                <th>Speciality</th>
+            </tr>
+
+            <tr>
+                <td>MedCare Hospital</td>
+                <td>Chennai</td>
+                <td>Cardiology</td>
+            </tr>
+
+            <tr>
+                <td>City Hospital</td>
+                <td>Tambaram</td>
+                <td>Orthopedics</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Doctors -->
+
+    <div class="card">
+        <h2>Available Doctors</h2>
+
+        <table>
+            <tr>
+                <th>Doctor</th>
+                <th>Speciality</th>
+                <th>Experience</th>
+            </tr>
+
+            <tr>
+                <td>Dr. Kumar</td>
+                <td>Cardiology</td>
+                <td>10 Years</td>
+            </tr>
+
+            <tr>
+                <td>Dr. Priya</td>
+                <td>Dermatology</td>
+                <td>8 Years</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Appointment -->
+
+    <div class="card">
+        <h2>Book Appointment</h2>
+
+        <select>
+            <option>Select Doctor</option>
+            <option>Dr. Kumar</option>
+            <option>Dr. Priya</option>
+        </select>
+
+        <input type="date">
+        <input type="time">
+
+        <button onclick="bookAppointment()">
+            Book Appointment
+        </button>
+    </div>
+
+    <!-- Check In -->
+
+    <div class="card">
+        <h2>Patient Check-In Form</h2>
+
+        <input type="text" placeholder="Patient Name">
+
+        <textarea placeholder="Symptoms"></textarea>
+
+        <button>Submit</button>
+    </div>
+
+    <!-- Status -->
+
+    <div class="card">
+        <h2>Appointment Status</h2>
+
+        <input type="text" placeholder="Appointment ID">
+
+        <button onclick="checkStatus()">
+            View Status
+        </button>
+    </div>
+
+    <!-- History -->
+
+    <div class="card">
+        <h2>Past Appointment History</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>15-06-2026</td>
+                <td>Dr. Kumar</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Reviews -->
+
+    <div class="card">
+        <h2>Doctor Reviews</h2>
+
+        <textarea rows="4"
+        placeholder="Write your review"></textarea>
+
+        <button>Submit Review</button>
+    </div>
+
+    <!-- Google Map -->
+
+    <div class="card">
+        <h2>Hospital Location</h2>
+
+        <p>Google Map can be embedded here.</p>
+
+        <iframe
+        width="100%"
+        height="300"
+        src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+    <!-- Hospital Registration -->
+
+    <div class="card">
+        <h2>Hospital Registration</h2>
+
+        <input type="text" placeholder="Hospital Name">
+        <input type="text" placeholder="Location">
+
+        <button>Register Hospital</button>
+    </div>
+
+    <!-- Hospital Login -->
+
+    <div class="card">
+        <h2>Hospital Login</h2>
+
+        <input type="text" placeholder="Hospital ID">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Update Details -->
+
+    <div class="card">
+        <h2>Update Hospital Details</h2>
+
+        <textarea placeholder="Hospital Details"></textarea>
+
+        <button>Update</button>
+    </div>
+
+    <!-- Admin -->
+
+    <div class="card">
+        <h2>Admin Dashboard</h2>
+
+        <button>Manage Doctors</button>
+        <button>Manage Appointments</button>
+        <button>View Statistics</button>
+        <button>Rating Details</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 MedCare Hospital Appointment System
+</footer>
+
+</body>
+</html>
