@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Parlour Appointment Booking System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#fff0f5;
+        }
+
+        header{
+            background:#c2185b;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#e91e63;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#c2185b;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#c2185b;
+            color:white;
+        }
+
+        footer{
+            background:#c2185b;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function bookAppointment(){
+            alert("Appointment booked successfully.");
+        }
+
+        function cancelAppointment(){
+            alert("Appointment cancelled.");
+        }
+
+        function paymentDone(){
+            alert("Payment successful.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Beauty Parlour Appointment System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Appointments</a>
+    <a href="#">Staff</a>
+    <a href="#">Payments</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Registration -->
+
+    <div class="card">
+        <h2>Customer Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- Login -->
+
+    <div class="card">
+        <h2>Customer Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Services -->
+
+    <div class="card">
+        <h2>Available Services</h2>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Hair Cut</td>
+                <td>30 Minutes</td>
+                <td>₹300</td>
+            </tr>
+
+            <tr>
+                <td>Facial</td>
+                <td>60 Minutes</td>
+                <td>₹800</td>
+            </tr>
+
+            <tr>
+                <td>Bridal Makeup</td>
+                <td>3 Hours</td>
+                <td>₹5000</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Stylists -->
+
+    <div class="card">
+        <h2>Stylists</h2>
+
+        <table>
+            <tr>
+                <th>Stylist</th>
+                <th>Specialization</th>
+            </tr>
+
+            <tr>
+                <td>Priya</td>
+                <td>Hair Styling</td>
+            </tr>
+
+            <tr>
+                <td>Anitha</td>
+                <td>Makeup Artist</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Appointment Booking -->
+
+    <div class="card">
+        <h2>Book Appointment</h2>
+
+        <select>
+            <option>Hair Cut</option>
+            <option>Facial</option>
+            <option>Bridal Makeup</option>
+        </select>
+
+        <select>
+            <option>Priya</option>
+            <option>Anitha</option>
+        </select>
+
+        <input type="date">
+
+        <input type="time">
+
+        <button onclick="bookAppointment()">
+            Book Appointment
+        </button>
+    </div>
+
+    <!-- Reservation Calendar -->
+
+    <div class="card">
+        <h2>Reservation Calendar</h2>
+
+        <input type="date">
+
+        <p>Available Time Slots:</p>
+        <ul>
+            <li>10:00 AM</li>
+            <li>11:00 AM</li>
+            <li>02:00 PM</li>
+            <li>04:00 PM</li>
+        </ul>
+    </div>
+
+    <!-- Upcoming Appointments -->
+
+    <div class="card">
+        <h2>Upcoming Reservations</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Service</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>25-06-2026</td>
+                <td>Facial</td>
+                <td>Confirmed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- History -->
+
+    <div class="card">
+        <h2>Reservation History</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Service</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>15-06-2026</td>
+                <td>Hair Cut</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Profile -->
+
+    <div class="card">
+        <h2>Personal Profile</h2>
+
+        <input type="text" value="Customer Name">
+
+        <input type="email" value="customer@gmail.com">
+
+        <button>Update Profile</button>
+    </div>
+
+    <!-- Payment -->
+
+    <div class="card">
+        <h2>Payment Options</h2>
+
+        <select>
+            <option>Full Payment</option>
+            <option>50% Deposit</option>
+        </select>
+
+        <select>
+            <option>PayPal</option>
+            <option>Stripe</option>
+            <option>Credit Card</option>
+        </select>
+
+        <button onclick="paymentDone()">
+            Make Payment
+        </button>
+    </div>
+
+    <!-- Cancel -->
+
+    <div class="card">
+        <h2>Cancel Appointment</h2>
+
+        <input type="text" placeholder="Reservation ID">
+
+        <button onclick="cancelAppointment()">
+            Cancel Appointment
+        </button>
+    </div>
+
+    <!-- Staff -->
+
+    <div class="card">
+        <h2>Salon Manager Dashboard</h2>
+
+        <button>View Reservations</button>
+        <button>Add Reservation</button>
+        <button>Edit Reservation</button>
+        <button>Call Customer</button>
+        <button>Send SMS</button>
+    </div>
+
+    <!-- Feedback -->
+
+    <div class="card">
+        <h2>Customer Feedback</h2>
+
+        <textarea rows="4"
+        placeholder="Share your experience"></textarea>
+
+        <button>Submit Feedback</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Beauty Parlour Appointment Booking System
+</footer>
+
+</body>
+</html>
