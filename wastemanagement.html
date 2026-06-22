@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Waste Management System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4fff2;
+        }
+
+        header{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#40916c;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            margin-top:20px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,textarea,select{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            background:#2d6a4f;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#2d6a4f;
+            color:white;
+        }
+
+        footer{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function complaint(){
+            alert("Complaint Registered Successfully");
+        }
+
+        function route(){
+            alert("Route Assigned Successfully");
+        }
+
+        function load(){
+            alert("Garbage Load Updated");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Waste Management System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Complaints</a>
+    <a href="#">Drivers</a>
+    <a href="#">Reports</a>
+    <a href="#">Admin</a>
+</nav>
+
+<div class="container">
+
+    <!-- Public Registration -->
+
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- User Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Complaint -->
+
+    <div class="card">
+        <h2>Register Complaint</h2>
+
+        <input type="text" placeholder="Location">
+
+        <textarea placeholder="Complaint Details"></textarea>
+
+        <button onclick="complaint()">
+            Submit Complaint
+        </button>
+    </div>
+
+    <!-- Complaint Status -->
+
+    <div class="card">
+        <h2>My Complaint Status</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>C101</td>
+                <td>In Progress</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Driver Login -->
+
+    <div class="card">
+        <h2>Driver Login</h2>
+
+        <input type="text" placeholder="Driver ID">
+
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Daily Work -->
+
+    <div class="card">
+        <h2>Daily Work Updates</h2>
+
+        <p>Route: Zone A → Zone B → Dumping Yard</p>
+    </div>
+
+    <!-- Route -->
+
+    <div class="card">
+        <h2>Choose Best Route</h2>
+
+        <select>
+            <option>Route 1</option>
+            <option>Route 2</option>
+        </select>
+
+        <button onclick="route()">
+            Select Route
+        </button>
+    </div>
+
+    <!-- Load -->
+
+    <div class="card">
+        <h2>Update Garbage Load</h2>
+
+        <input type="number"
+        placeholder="Load in KG">
+
+        <button onclick="load()">
+            Update
+        </button>
+    </div>
+
+    <!-- Admin Login -->
+
+    <div class="card">
+        <h2>Administrator Login</h2>
+
+        <input type="text"
+        placeholder="Admin Username">
+
+        <input type="password"
+        placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Garbage Bin -->
+
+    <div class="card">
+        <h2>Create Garbage Bin</h2>
+
+        <input type="text"
+        placeholder="Bin Location">
+
+        <button>Create Bin</button>
+        <button>Update Bin</button>
+        <button>Delete Bin</button>
+    </div>
+
+    <!-- Drivers -->
+
+    <div class="card">
+        <h2>Manage Drivers</h2>
+
+        <table>
+            <tr>
+                <th>Driver</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Rajesh</td>
+                <td>Available</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Reports -->
+
+    <div class="card">
+        <h2>Garbage Reports</h2>
+
+        <table>
+            <tr>
+                <th>Zone</th>
+                <th>Waste Collected</th>
+            </tr>
+
+            <tr>
+                <td>Zone A</td>
+                <td>1500 KG</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Public Complaints -->
+
+    <div class="card">
+        <h2>Public Complaints</h2>
+
+        <table>
+            <tr>
+                <th>Complaint ID</th>
+                <th>Location</th>
+            </tr>
+
+            <tr>
+                <td>C101</td>
+                <td>Main Road</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Smart Waste Management System
+</footer>
+
+</body>
+</html>
