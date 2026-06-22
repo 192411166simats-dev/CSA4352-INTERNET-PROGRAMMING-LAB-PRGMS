@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VetCure Animal Health System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f6fff2;
+        }
+
+        header{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        nav{
+            background:#40916c;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input,textarea,select{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#2d6a4f;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#2d6a4f;
+            color:white;
+        }
+
+        footer{
+            background:#2d6a4f;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+
+    <script>
+        function submitComplaint(){
+            alert("Complaint submitted successfully.");
+        }
+
+        function payment(){
+            alert("Payment successful.");
+        }
+
+        function solution(){
+            alert("Doctor solution posted.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>VetCure Animal Health System</h1>
+    <p>Internet Programming Laboratory Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Doctors</a>
+    <a href="#">Complaints</a>
+    <a href="#">Payments</a>
+    <a href="#">Reports</a>
+</nav>
+
+<div class="container">
+
+    <!-- Farmer Registration -->
+
+    <div class="card">
+        <h2>Farmer Registration</h2>
+
+        <input type="text" placeholder="Farmer Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </div>
+
+    <!-- User Login -->
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- Complaint -->
+
+    <div class="card">
+        <h2>Post Animal Complaint</h2>
+
+        <input type="text" placeholder="Animal Name">
+
+        <textarea placeholder="Symptoms"></textarea>
+
+        <input type="file">
+
+        <button onclick="submitComplaint()">
+            Submit Complaint
+        </button>
+    </div>
+
+    <!-- Status -->
+
+    <div class="card">
+        <h2>My Complaint Status</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>VC101</td>
+                <td>Under Review</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Doctors -->
+
+    <div class="card">
+        <h2>Available Doctors</h2>
+
+        <table>
+            <tr>
+                <th>Doctor</th>
+                <th>Clinic</th>
+            </tr>
+
+            <tr>
+                <td>Dr. Kumar</td>
+                <td>Private Clinic</td>
+            </tr>
+
+            <tr>
+                <td>Dr. Priya</td>
+                <td>Government CVH</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- News -->
+
+    <div class="card">
+        <h2>Animal Health News</h2>
+
+        <p>Vaccination drive starts next month.</p>
+        <p>Dairy cattle health awareness program announced.</p>
+    </div>
+
+    <!-- Reports -->
+
+    <div class="card">
+        <h2>Disease Reports</h2>
+
+        <p>Most common disease in the area: Foot and Mouth Disease.</p>
+    </div>
+
+    <!-- Payment -->
+
+    <div class="card">
+        <h2>Make Payment</h2>
+
+        <select>
+            <option>Bank Transfer</option>
+            <option>Easy Paisa</option>
+        </select>
+
+        <button onclick="payment()">
+            Pay Now
+        </button>
+    </div>
+
+    <!-- Feedback -->
+
+    <div class="card">
+        <h2>Feedback</h2>
+
+        <textarea placeholder="Enter feedback"></textarea>
+
+        <button>Submit Feedback</button>
+    </div>
+
+    <!-- Profile -->
+
+    <div class="card">
+        <h2>My Profile</h2>
+
+        <input type="text" value="Farmer Name">
+        <input type="email" value="farmer@gmail.com">
+
+        <button>Update Profile</button>
+    </div>
+
+    <!-- Doctor Registration -->
+
+    <div class="card">
+        <h2>Doctor Registration</h2>
+
+        <input type="text" placeholder="Doctor Name">
+        <input type="text" placeholder="Specialization">
+
+        <button>Register Doctor</button>
+    </div>
+
+    <!-- Doctor Login -->
+
+    <div class="card">
+        <h2>Doctor Login</h2>
+
+        <input type="text" placeholder="Doctor ID">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+    </div>
+
+    <!-- View Complaints -->
+
+    <div class="card">
+        <h2>View Complaints</h2>
+
+        <table>
+            <tr>
+                <th>Complaint</th>
+                <th>Animal</th>
+            </tr>
+
+            <tr>
+                <td>Fever</td>
+                <td>Cow</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Solution -->
+
+    <div class="card">
+        <h2>Post Solution</h2>
+
+        <textarea placeholder="Treatment details"></textarea>
+
+        <button onclick="solution()">
+            Submit Solution
+        </button>
+    </div>
+
+    <!-- Payments -->
+
+    <div class="card">
+        <h2>Payment Details</h2>
+
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr>
+                <td>Vikram</td>
+                <td>₹500</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 VetCure Animal Health System
+</footer>
+
+</body>
+</html>
